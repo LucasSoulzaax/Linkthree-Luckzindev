@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS TEMOS VARIÁVEIS */
+:root{
+    --bg-image: linear-gradient(45deg, #bebebe, #fad0c4 99%);
+    --text-color: #111111;
+    --carg-bg: rgba(255, 255, 255, 0.4);
+    --btn-hover: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(255, 255, 255, 0.5);
+    --switch-pos: 2px;
+
+
+    /* DARK AQUI EM BAIXO  */
+    --bg-image-dark: linear-gradient(45deg, #181818, #fad0c4 99%);
+    --text-color-dark: #ffffff;
+    --carg-bg: rgba(255, 255, 255, 0.4);
+    --btn-hover: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(255, 255, 255, 0.5);
+    --switch-pos: 2px;
+
+}
+
+
+.dark{
+    background: var(--bg-image);
+    color: var(--text-color);
+    --carg-bg: rgba(0, 0, 0, 0.3);
+    --btn-hover: rgba(0, 0, 0, 0.5);
+    --border-color: rgba(255, 255, 255, 0.2);
+    --switch-pos: 28px;
+
+
+    a{
+        color: var(--text-color);
+    }
+}
+
+
+body{
+    background: var(--bg-image-dark);
+    color: var(--text-color-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 100%;
+    max-width: 480px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    border: 3px solid var(--border-color);
+    margin-bottom: 10px;
+}
+
+header h1{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#switch-area{
+    margin: 24px auto;
+    width: 60px;
+}
+
+
+#switch-btn{
+    width: 60px;
+    height: 28px;
+    background: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+#switch-btn::before{
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: var(--switch-pos);
+    transition: 0.3s;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: var(--carg-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-weight: 600px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+a:hover{
+    background: var(--btn-hover);
+    transform: scale(1.02);
+}
+
+footer{
+    padding: 24px 0;
+    font-size: 14px;
+}
+
